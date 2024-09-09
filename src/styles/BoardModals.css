@@ -1,0 +1,170 @@
+/* Modal Container */
+.modal-container {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 10;
+   transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+ }
+ 
+ .modal-container.show {
+   opacity: 1;
+   transform: scale(1); /* Show the modal */
+ }
+ 
+ .modal-container.hide {
+   opacity: 0;
+   transform: scale(0.95); /* Hide the modal with a scale-down effect */
+ }
+ 
+ /* Modal */
+ .modal {
+   background-color: white;
+   padding: 24px;
+   border-radius: 6px;
+   overflow-y: auto; /* Changed to auto for better scrolling behavior */
+   max-height: 90%;
+   width: 343px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+   transition: background-color 0.3s ease; /* Smooth transition for background color */
+ }
+ 
+ .dark .modal {
+   background: #2b2c37;
+ }
+ 
+ /* Modal Buttons */
+ .modal button {
+   width: 100%;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 13px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
+ }
+ 
+ .btn-light {
+   color: #635fc7;
+   background: rgba(99, 95, 199, 0.1);
+ }
+ 
+ .btn-light:hover {
+   background: rgba(99, 95, 199, 0.2); /* Darker background on hover */
+ }
+ 
+ /* Modal Heading */
+ .modal h3 {
+   margin-bottom: 24px;
+   font-size: 18px; /* Larger font size for better readability */
+   color: #333; /* Darker text color */
+   transition: color 0.3s ease; /* Smooth transition for text color */
+ }
+ 
+ .dark .modal h3 {
+   color: #d0d0d0; /* Light text color for dark mode */
+ }
+ 
+ /* Labels */
+ label {
+   display: block;
+   margin-bottom: 8px;
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 15px;
+   color: #828fa3;
+   transition: color 0.3s ease; /* Smooth transition for label color */
+ }
+ 
+ .dark label {
+   color: white;
+ }
+ 
+ /* Modal Column */
+ .modal-column {
+   margin-bottom: 12px;
+   display: flex;
+   align-items: center;
+   gap: 16px;
+ }
+ 
+ .modal-column img {
+   cursor: pointer;
+   transition: transform 0.3s ease; /* Smooth transition for image scale effect */
+ }
+ 
+ .modal-column img:hover {
+   transform: scale(1.1); /* Slightly enlarge image on hover */
+ }
+ 
+ /* Inputs and Textareas */
+ .modal input,
+ textarea {
+   height: 40px;
+   width: 100%;
+   padding: 8px 16px;
+   border: 1px solid rgba(130, 143, 163, 0.25);
+   border-radius: 4px;
+   font-weight: 500;
+   font-size: 13px;
+   transition: border-color 0.3s ease; /* Smooth transition for border color */
+ }
+ 
+ textarea {
+   height: 135px;
+   margin-bottom: 24px;
+ }
+ 
+ #board-name-input,
+ #task-name-input {
+   margin-bottom: 24px;
+   width: 100%;
+ }
+ 
+ input::placeholder,
+ textarea::placeholder {
+   opacity: 0.25;
+ }
+ 
+ .dark input::placeholder,
+ textarea::placeholder {
+   color: white;
+ }
+ 
+ /* Input Container */
+ .input-container {
+   width: 100%;
+   position: relative;
+ }
+ 
+ /* Error Message */
+ .cant-be-empty-span {
+   position: absolute;
+   color: #ea5555;
+   top: 8px;
+   right: 16px;
+   width: fit-content;
+   white-space: nowrap;
+ }
+ 
+ /* Red Border */
+ .red-border {
+   border-color: #ea5555 !important;
+ }
+ 
+ /* Media Queries */
+ @media only screen and (min-width: 768px) {
+   .modal {
+     padding: 32px;
+     width: 480px;
+   }
+ }
+ 

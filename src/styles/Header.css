@@ -1,0 +1,293 @@
+/* Header Container */
+.header-container {
+   position: fixed;
+   right: 0;
+   left: 0;
+   z-index: 1;
+   transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+}
+
+/* Header */
+header {
+   display: flex;
+   padding: 16px;
+   align-items: center;
+   background-color: #f0f4f8; /* Light background for header */
+   border-bottom: 1px solid #e0e4e8; /* Soft border for separation */
+   position: relative;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+   transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
+}
+
+.dark header {
+   background: #1e2028; /* Dark background for dark mode */
+   border-bottom: 1px solid #2c2f3b; /* Slightly darker border for dark mode */
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+}
+
+/* Elipsis Menu */
+header .elipsis-menu {
+   top: 90%;
+   right: 2%;
+   width: 150px;
+   transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header .elipsis-menu:hover {
+   transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Header Name Container */
+.header-name-container {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   margin-right: auto;
+   margin-left: 16px;
+   transition: margin 0.3s ease; /* Smooth transition for margin changes */
+}
+
+.header-name-container img {
+   cursor: pointer;
+   transition: transform 0.3s ease; /* Smooth transition for image scale effect */
+}
+
+.header-name-container img:hover {
+   transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+/* Add Task Button */
+.add-task-btn {
+   margin-right: 16px;
+   background: #4caf50; /* Softer green background */
+   color: white;
+   border-radius: 24px;
+   padding: 10px 18px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for better visibility */
+   transition: background 0.3s, transform 0.3s; /* Smooth transition for background color and scaling */
+}
+
+.add-task-btn:hover {
+   background: #66bb6a; /* Lighter green on hover */
+   transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Button Off State */
+.btn-off {
+   opacity: 50%; /* Slightly more visible */
+   cursor: not-allowed; /* Cursor indicates disabled state */
+   transition: opacity 0.3s ease; /* Smooth transition for opacity changes */
+}
+
+/* Elipsis Icon */
+.elipsis {
+   height: 16px;
+   cursor: pointer;
+   transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.elipsis:hover {
+   transform: rotate(90deg); /* Rotate icon on hover */
+}
+
+/* Dropdown Modal */
+.dropdown-container {
+   position: absolute;
+   top: 64px;
+   bottom: -100vh;
+   left: 0;
+   right: 0;
+   background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque white */
+   padding: 24px 55px;
+   transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+}
+
+.dropdown-container.show {
+   opacity: 1;
+   transform: translateY(0); /* Show the container */
+}
+
+.dropdown-modal {
+   width: 100%;
+   background-color: white;
+   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+   border-radius: 8px;
+   padding: 16px 0;
+   color: #333; /* Darker text for better readability */
+   transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+}
+
+.dropdown-modal h3 {
+   font-size: 14px; /* Slightly larger for better readability */
+   line-height: 18px;
+   letter-spacing: 1px;
+   margin: 0 0 24px 19px;
+}
+
+/* Dropdown Board Items */
+.dropdown-board {
+   padding: 15px 24px;
+   font-weight: 700;
+   font-size: 16px; /* Slightly larger font size */
+   margin-right: 24px;
+   cursor: pointer;
+   transition: background 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+.dropdown-board:hover {
+   background: rgba(0, 150, 136, 0.1); /* Soft teal hover effect */
+   color: #009688; /* Teal text color on hover */
+   border-radius: 0px 100px 100px 0px;
+}
+
+.dark .dropdown-board:hover {
+   background: #1b1e24; /* Darker background for dark mode */
+   color: #7cc75f; /* Lighter green text color */
+}
+
+.board-active {
+   background-color: #009688; /* Teal background for active board */
+   border-radius: 0px 100px 100px 0px;
+   color: white;
+}
+
+/* Dropdown Board Icon */
+.dropdown-board img {
+   margin-right: 12px;
+}
+
+/* Create Board Button */
+.dropdown-create-board-btn {
+   color: #009688; /* Teal color for button */
+   fill: #009688;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+   padding: 14px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 24px;
+   margin: 16px;
+   background: #e8f0fe; /* Light blue background */
+   border-radius: 6px;
+   transition: background 0.3s ease; /* Smooth transition for background color */
+}
+
+.dark .theme-toggle {
+   background: #30343f; /* Dark background for dark mode */
+}
+
+/* Switch */
+.switch {
+   position: relative;
+   display: inline-block;
+   width: 40px;
+   height: 20px;
+}
+
+.switch input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+}
+
+.slider {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #009688; /* Teal background for switch */
+   transition: background 0.4s;
+}
+
+.slider:hover {
+   background: #00796b; /* Darker teal on hover */
+}
+
+.slider:before {
+   position: absolute;
+   content: "";
+   height: 14px;
+   width: 14px;
+   left: 3px;
+   bottom: 3px;
+   background-color: white;
+   transition: transform 0.4s;
+}
+
+input:checked + .slider:before {
+   transform: translateX(20px);
+}
+
+.slider.round {
+   border-radius: 34px;
+}
+
+.slider.round:before {
+   border-radius: 50%;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+   .logo-container {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     width: calc(261px - 16px);
+     padding-left: 10px;
+   }
+
+   .logo-text {
+     font-weight: bold;
+     font-size: 32px;
+   }
+
+   .header-name-container {
+     margin-left: 24px;
+   }
+
+   .dropdown-container {
+     position: initial;
+     padding: 0;
+     height: 90%;
+     background-color: white;
+   }
+
+   .dark .dropdown-container {
+     background: #2c2f3b; /* Dark background for dark mode */
+   }
+
+   .dropdown-modal {
+     box-shadow: none;
+     border-radius: 0;
+     padding: 0;
+     height: 100%;
+     position: relative;
+   }
+
+   .theme-toggle {
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin-bottom: 0;
+   }
+
+   .add-task-btn {
+     width: 164px;
+     height: 48px;
+     margin-right: 24px;
+   }
+
+   .elipsis {
+     height: 20px;
+     width: 5px;
+   }
+}

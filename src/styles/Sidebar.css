@@ -1,0 +1,75 @@
+/* Sidebar */
+.sidebar {
+   min-width: 261px;
+   background-color: #ffffff; /* Light background for better readability */
+   padding-top: calc(54px - 16px);
+   position: fixed;
+   top: 72px;
+   bottom: 0;
+   left: 0;
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
+ }
+ 
+ .dark .sidebar {
+   background: #2b2c37; /* Dark background for dark mode */
+   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* More pronounced shadow for dark mode */
+ }
+ 
+ /* Sidebar Toggle Container */
+ .toggle-sidebar-container {
+   display: flex;
+   margin: 8px 24px 32px 0;
+   gap: 10px;
+   color: #828fa3;
+   cursor: pointer;
+   padding: 15px 30px;
+   transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
+   border-radius: 0px 100px 100px 0px;
+ }
+ 
+ .toggle-sidebar-container:hover {
+   background: rgba(99, 95, 199, 0.2); /* Lighten background on hover */
+   color: #635fc7; /* Change text color on hover */
+ }
+ 
+ .dark .toggle-sidebar-container:hover {
+   background: rgba(255, 255, 255, 0.1); /* Lighten background on hover for dark mode */
+   color: #635fc7; /* Maintain hover text color */
+ }
+ 
+ /* Sidebar Closed State */
+ .sidebar-closed {
+   background: #635fc7; /* Primary color for closed state */
+   width: 56px;
+   height: 48px;
+   border-radius: 0px 100px 100px 0px;
+   bottom: 32px;
+   top: auto;
+   padding: 0;
+   min-width: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow for closed state */
+ }
+ 
+ .sidebar-closed .toggle-sidebar-container {
+   background: transparent;
+ }
+ 
+ .dark .sidebar-closed {
+   background: #2b2c37; /* Dark background for dark mode */
+ }
+ 
+ .sidebar-closed:hover {
+   background: #a8a4ff; /* Lighten background on hover */
+   cursor: pointer;
+   transform: scale(1.05); /* Slightly enlarge on hover */
+ }
+ 
+ .toggle-closed {
+   margin: 0;
+ }
+ 
